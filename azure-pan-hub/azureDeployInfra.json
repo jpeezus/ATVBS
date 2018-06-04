@@ -199,7 +199,7 @@
 			"type": "securestring",
 			"defaultValue": "Dem0pa$$w0rd",
 			"metadata": {
-				"description": "Password for the administrator account of all VM instances. Must be specified if Authentication Type is 'password'."
+				"description": "Password for the administrator account of all VM instances. This must be specified if Authentication Type is 'password'."
 			}
 		},
 		"sshPublicKey": {
