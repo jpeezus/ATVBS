@@ -210,28 +210,28 @@
 			}
 		},
 		"BootstrapStorageAccount": {
-			"defaultValue": null,
+			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "Storage account hosting the bootstrap files"
 				}
 		},
 		"StorageAccountAccessKey": {
-			"defaultValue": null,
+			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "Authentication key to access the storage account"
 				}
 		},
 		"StorageAccountFileShare": {
-			"defaultValue": null,
+			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "The file share in the storage account where the bootstrap files are located"
 				}
 		},
 		"StorageAccountFileShareDirectory": {
-			"defaultValue": "None",
+			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "The subdirectory hosting the bootstrap files. Only required if hosting multiple bootstrap directories on the same share"
