@@ -250,7 +250,7 @@
 		"location"   : "[resourceGroup().location]",
 		"rgname"     : "[resourceGroup().name]",
 		"storageName": "[toLower(concat(parameters('storageName')))]",
-		"customData": "[concat('storage-account=', parameters('BootstrapStorageAccount'), ',access-key=', parameters('StorageAccountAccessKey'), ',file-share=', parameters('StorageAccountFileShare'), ',share-directory=', parameters('StorageAccountFileShareDirectory'))]"
+		"customData1": "[concat('storage-account=', parameters('BootstrapStorageAccount'), ',access-key=', parameters('StorageAccountAccessKey'), ',file-share=', parameters('StorageAccountFileShare'), ',share-directory=', parameters('StorageAccountFileShareDirectory'))]"
 	},
 
 	"resources": [
@@ -408,7 +408,7 @@
 						"value": "[variables('baseUrl')]"
 					},
 					"customData": {
-						"value": "[variables('customData')]"
+						"value": "[variables('customData1')]"
 					},
 					"location": {
 						"value": "[variables('location')]"
