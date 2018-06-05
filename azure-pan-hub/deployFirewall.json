@@ -19,9 +19,6 @@
 				"description": "Name prefix of the new storage account created to store the VM's disks"
 			}
 		},
-		"customData": {
-		  "type": "string"
-		},
 		"avSetName": {
 			"type": "string",
 			"defaultValue": "firewall-avset",
@@ -411,7 +408,7 @@
 						"value": "[parameters('location')]"
 					},
 					"customData": {
-						"value": "[parameters('customData')]"
+						"value": "[variables('customData')]"
 					},
 					"avSetName": {
 						"value": "[parameters('avSetName')]"
@@ -485,7 +482,7 @@
 						"value": "[parameters('location')]"
 					},
 					"customData": {
-						"value": "[parameters('customData')]"
+						"value": "[variables('customData')]"
 					},
 					"virtualMachineName": {
 						"value": "[concat(parameters('virtualMachineName'), copyindex())]"

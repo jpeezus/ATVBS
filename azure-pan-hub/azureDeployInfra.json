@@ -407,6 +407,9 @@
 					"baseUrl": {
 						"value": "[variables('baseUrl')]"
 					},
+					"customData": {
+						"value": "[variables('customData')]"
+					},
 					"location": {
 						"value": "[variables('location')]"
 					},
