@@ -249,8 +249,7 @@
 
 		"location"   : "[resourceGroup().location]",
 		"rgname"     : "[resourceGroup().name]",
-		"storageName": "[toLower(concat(parameters('storageName')))]",
-		"customData1": "[concat('storage-account=', parameters('BootstrapStorageAccount'), ',access-key=', parameters('StorageAccountAccessKey'), ',file-share=', parameters('StorageAccountFileShare'), ',share-directory=', parameters('StorageAccountFileShareDirectory'))]"
+		"storageName": "[toLower(concat(parameters('storageName')))]"
 	},
 
 	"resources": [
@@ -407,9 +406,6 @@
 					"baseUrl": {
 						"value": "[variables('baseUrl')]"
 					},
-					"customData": {
-						"value": "[variables('customData1')]"
-					},
 					"location": {
 						"value": "[variables('location')]"
 					},
@@ -418,6 +414,18 @@
 					},
 					"storageName": {
 						"value": "[variables('storageName')]"
+					},
+					"BootstrapStorageAccount": {
+						"value": "[parameters('BootstrapStorageAccount')]"
+					},
+					"StorageAccountAccessKey": {
+						"value": "[parameters('StorageAccountAccessKey')]"
+					},
+					"StorageAccountFileShare": {
+						"value": "[parameters('StorageAccountFileShare')]"
+					},
+					"StorageAccountFileShareDirectory": {
+						"value": "[parameters('StorageAccountFileShareDirectory')]"
 					},
 					"virtualNetworkRG": {
 						"value": "[variables('rgName')]"
