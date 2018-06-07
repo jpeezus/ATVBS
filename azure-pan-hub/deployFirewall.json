@@ -84,7 +84,7 @@
 		},
 		"bootstrap": {
 			"type": "string",
-			"defaultValue" : "yes",
+			"defaultValue" : "no",
 			"allowedValues": [
 				"yes",
 				"no"
@@ -547,18 +547,6 @@
 					},
 					"sshKey": {
 						"value": "[parameters('sshKey')]"
-					},
-					"BootstrapStorageAccount": {
-						"value": "[parameters('BootstrapStorageAccount')]"
-					},
-					"StorageAccountAccessKey": {
-						"value": "[parameters('StorageAccountAccessKey')]"
-					},
-					"StorageAccountFileShare": {
-						"value": "[parameters('StorageAccountFileShare')]"
-					},
-					"StorageAccountFileShareDirectory": {
-						"value": "[parameters('StorageAccountFileShareDirectory')]"
 					},
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
