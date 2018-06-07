@@ -84,7 +84,7 @@
 		},
 		"bootstrap": {
 			"type": "string",
-			"defaultValue" : "no",
+			"defaultValue" : "yes",
 			"allowedValues": [
 				"yes",
 				"no"
