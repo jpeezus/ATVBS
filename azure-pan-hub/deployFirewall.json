@@ -548,6 +548,18 @@
 					"sshKey": {
 						"value": "[parameters('sshKey')]"
 					},
+					"BootstrapStorageAccount": {
+						"value": "[parameters('BootstrapStorageAccount')]"
+					},
+					"StorageAccountAccessKey": {
+						"value": "[parameters('StorageAccountAccessKey')]"
+					},
+					"StorageAccountFileShare": {
+						"value": "[parameters('StorageAccountFileShare')]"
+					},
+					"StorageAccountFileShareDirectory": {
+						"value": "[parameters('StorageAccountFileShareDirectory')]"
+					},
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
 					},
