@@ -209,28 +209,28 @@
 				"description": "SSH RSA public key file as a string. Must be specified if Authentication Type is 'sshPublicKey'."
 			}
 		},
-		"BootstrapStorageAccount": {
+		"BootstrapStorageAccount1": {
 			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "Storage account hosting the bootstrap files"
 				}
 		},
-		"StorageAccountAccessKey": {
+		"StorageAccountAccessKey1": {
 			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "Authentication key to access the storage account"
 				}
 		},
-		"StorageAccountFileShare": {
+		"StorageAccountFileShare1": {
 			"defaultValue": "",
 			"type": "String",
 			"metadata": {
 					"description": "The file share in the storage account where the bootstrap files are located"
 				}
 		},
-		"StorageAccountFileShareDirectory": {
+		"StorageAccountFileShareDirectory1": {
 			"defaultValue": "",
 			"type": "String",
 			"metadata": {
@@ -416,16 +416,16 @@
 						"value": "[variables('storageName')]"
 					},
 					"BootstrapStorageAccount": {
-						"value": "[parameters('BootstrapStorageAccount')]"
+						"value": "[parameters('BootstrapStorageAccount1')]"
 					},
 					"StorageAccountAccessKey": {
-						"value": "[parameters('StorageAccountAccessKey')]"
+						"value": "[parameters('StorageAccountAccessKey1')]"
 					},
 					"StorageAccountFileShare": {
-						"value": "[parameters('StorageAccountFileShare')]"
+						"value": "[parameters('StorageAccountFileShare1')]"
 					},
 					"StorageAccountFileShareDirectory": {
-						"value": "[parameters('StorageAccountFileShareDirectory')]"
+						"value": "[parameters('StorageAccountFileShareDirectory1')]"
 					},
 					"virtualNetworkRG": {
 						"value": "[variables('rgName')]"
