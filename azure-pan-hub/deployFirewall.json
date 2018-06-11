@@ -194,34 +194,13 @@
 				"description": "Name of public IP resource for mgmt interface"
 			}
 		},
-		"BootstrapStorageAccount": {
-			"defaultValue": "",
-			"type": "String",
-			"metadata": {
-					"description": "Storage account hosting the bootstrap files"
-				}
-		},
-		"StorageAccountAccessKey": {
-			"defaultValue": "",
-			"type": "String",
-			"metadata": {
-					"description": "Authentication key to access the storage account"
-				}
-		},
-		"StorageAccountFileShare": {
-			"defaultValue": "",
-			"type": "String",
-			"metadata": {
-					"description": "The file share in the storage account where the bootstrap files are located"
-				}
-		},
-		"StorageAccountFileShareDirectory": {
-			"defaultValue": "",
-			"type": "String",
-			"metadata": {
-					"description": "The subdirectory hosting the bootstrap files. Only required if hosting multiple bootstrap directories on the same share"
-				}
-		}
+		// Bootstrap Parameters from deploy template
+        "customDataField": {
+            "type": "string",
+            "metadata": {
+                "description": "Credentials required by the firewall VM bootstrap code to access the storage"
+            }
+        }
 	},
 
 	"variables": {
@@ -468,18 +447,6 @@
 					"sshKey": {
 						"value": "[parameters('sshKey')]"
 					},
-					"BootstrapStorageAccount": {
-						"value": "[parameters('BootstrapStorageAccount')]"
-					},
-					"StorageAccountAccessKey": {
-						"value": "[parameters('StorageAccountAccessKey')]"
-					},
-					"StorageAccountFileShare": {
-						"value": "[parameters('StorageAccountFileShare')]"
-					},
-					"StorageAccountFileShareDirectory": {
-						"value": "[parameters('StorageAccountFileShareDirectory')]"
-					},
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
 					},
@@ -548,6 +515,9 @@
 					"sshKey": {
 						"value": "[parameters('sshKey')]"
 					},
+                    "customDataField": {
+                        "value": "[variables('customDataField')]"
+                    },
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
 					},

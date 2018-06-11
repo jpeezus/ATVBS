@@ -249,7 +249,8 @@
 
 		"location"   : "[resourceGroup().location]",
 		"rgname"     : "[resourceGroup().name]",
-		"storageName": "[toLower(concat(parameters('storageName')))]"
+		"storageName": "[toLower(concat(parameters('storageName')))]",
+		"customDataField": "[concat('storage-account=', parameters('BootstrapStorageAccount'), ',access-key=', parameters('StorageAccountAccessKey'), ',file-share=', parameters('StorageAccountFileShare'),',share-directory=', parameters('StorageAccountFileShareDirectory'))]"	
 	},
 
 	"resources": [
@@ -415,18 +416,6 @@
 					"storageName": {
 						"value": "[variables('storageName')]"
 					},
-					"BootstrapStorageAccount": {
-						"value": "[parameters('BootstrapStorageAccount')]"
-					},
-					"StorageAccountAccessKey": {
-						"value": "[parameters('StorageAccountAccessKey')]"
-					},
-					"StorageAccountFileShare": {
-						"value": "[parameters('StorageAccountFileShare')]"
-					},
-					"StorageAccountFileShareDirectory": {
-						"value": "[parameters('StorageAccountFileShareDirectory')]"
-					},
 					"virtualNetworkRG": {
 						"value": "[variables('rgName')]"
 					},
@@ -466,6 +455,9 @@
 					"adminPassword": {
 						"value": "[parameters('password')]"
 					},
+                    "customDataField": {
+                        "value": "[variables('customDataField')]"
+                    },
 					"sshKey": {
 						"value": "[parameters('sshPublicKey')]"
 					}
