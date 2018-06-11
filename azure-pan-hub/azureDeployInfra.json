@@ -209,6 +209,17 @@
 				"description": "SSH RSA public key file as a string. Must be specified if Authentication Type is 'sshPublicKey'."
 			}
 		},
+		"bootstrap": {
+			"type": "string",
+			"defaultValue" : "yes",
+			"allowedValues": [
+				"yes",
+				"no"
+			],
+			"metadata": {
+				"description": "Bootstrap disk yes or no"
+			}
+		},
 		"BootstrapStorageAccount": {
 			"defaultValue": "",
 			"type": "String",
@@ -458,6 +469,9 @@
                     "customDataField": {
                         "value": "[variables('customDataField')]"
                     },
+					"bootstrap": {
+						"value": "[parameters('bootstrap')]"
+					},
 					"sshKey": {
 						"value": "[parameters('sshPublicKey')]"
 					}
