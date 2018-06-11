@@ -83,7 +83,7 @@
 			"defaultValue": "byol"
 		},
 		"bootstrap": {
-			"type": "string"
+			"type": "string",
 			"allowedValues": [
 				"yes",
 				"no"
