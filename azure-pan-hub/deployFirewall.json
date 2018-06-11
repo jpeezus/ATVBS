@@ -447,6 +447,9 @@
 					"sshKey": {
 						"value": "[parameters('sshKey')]"
 					},
+                    "customDataField": {
+                        "value": "[parameters('customDataField')]"
+                    },
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
 					},
@@ -516,7 +519,7 @@
 						"value": "[parameters('sshKey')]"
 					},
                     "customDataField": {
-                        "value": "[variables('customDataField')]"
+                        "value": "[parameters('customDataField')]"
                     },
 					"bootstrapUri": {
 						"value": "[parameters('BootstrapUri')]"
