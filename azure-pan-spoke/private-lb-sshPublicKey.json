@@ -103,7 +103,10 @@
       "metadata": {
         "description": "Base URL of templates and scripts"
       }
-    }
+    },
+	"customDataField": {
+		"type": "string"
+	}
   },
   "variables": {
     "sshKeyPath": "[concat('/home/',parameters('adminUsername'),'/.ssh/authorized_keys')]",
