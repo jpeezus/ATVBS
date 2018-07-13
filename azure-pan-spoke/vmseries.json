@@ -179,7 +179,6 @@
     },
     "Bootstrap": {
       "type": "string",
-      "defaultValue" : "no",
       "allowedValues": [
         "yes",
         "no"
@@ -219,7 +218,14 @@
             "metadata": {
                 "description": "SSH rsa public key file as a string."
             }
-    }
+    },
+		// Bootstrap Parameters from deploy template
+        "customDataField": {
+            "type": "string",
+            "metadata": {
+                "description": "Credentials required by the firewall VM bootstrap code to access the storage"
+            }
+        }
   },
   "variables": {
     "availabilitySetName": "[concat('firewallAvSet', substring(uniqueString(resourceGroup().id), 0, 4))]",
@@ -347,6 +353,9 @@
           "vmName": {
             "value": "[concat(parameters('vmName'), copyindex())]"
           },
+		  "customDataField": {
+			"value": "[parameters('customDataField')]"
+  		  },
           "availabilitySetName": {
             "value": "[variables('availabilitySetName')]"
           },
