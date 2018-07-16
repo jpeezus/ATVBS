@@ -296,8 +296,7 @@
 		"storageAccountSetupURL" : "[concat(variables('baseUrl'),'/deployStorage.json')]",
 		"vnetPeeringURL": "[concat(variables('baseUrl'), '/deployVnetPeering.json')]",
 		"defaultUdrSetupURL": "[concat(variables('baseUrl'), '/deployDefaultUDR.json')]",
-		"vmseriesURL" : "[concat(variables('baseUrl'),'/vmseries.json')]",
-		"customDataField": "[concat('storage-account=', parameters('BootstrapStorageAccount'), ',access-key=', parameters('StorageAccountAccessKey'), ',file-share=', parameters('StorageAccountFileShare'),',share-directory=', parameters('StorageAccountFileShareDirectory'))]"
+		"vmseriesURL" : "[concat(variables('baseUrl'),'/vmseries.json')]"
 	},
 	"resources": [
 		{
@@ -509,8 +508,17 @@
 					"authenticationType": {
 						 "value": "[parameters('authenticationType')]"
 					},
-                    "customDataField": {
-                        "value": "[variables('customDataField')]"
+                    "BootstrapStorageAccount": {
+                        "value": "[parameters('BootstrapStorageAccount')]"
+                    },
+                    "StorageAccountAccessKey": {
+                        "value": "[parameters('StorageAccountAccessKey')]"
+                    },
+                    "StorageAccountFileShare": {
+                        "value": "[parameters('StorageAccountFileShare')]"
+                    },
+                    "StorageAccountFileShareDirectory": {
+                        "value": "[parameters('StorageAccountFileShareDirectory')]"
                     },
 					"sshKey": {
 						 "value": "[parameters('sshPublicKey')]"
