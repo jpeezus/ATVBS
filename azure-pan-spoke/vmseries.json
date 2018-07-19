@@ -218,7 +218,13 @@
             "metadata": {
                 "description": "SSH rsa public key file as a string."
             }
-    }
+    },
+	"customDataField": {
+		"type": "string",
+		"metadata": {
+			"description": "Credentials required by the firewall VM bootstrap code to access the storage"
+		}
+	}
   },
   "variables": {
     "availabilitySetName": "[concat('firewallAvSet', substring(uniqueString(resourceGroup().id), 0, 4))]",
@@ -374,7 +380,7 @@
             "value": "[parameters('storageAccountName')]"
           },
 		  "customDataField": {
-			"value": "[variables('customDataField')]"
+			"value": "[parameters('customDataField')]"
 		  },
           "sshKey": {
             "value": "[parameters('sshKey')]"
