@@ -512,6 +512,9 @@
                     "customDataField": {
                         "value": "[variables('customDataField')]"
                     },
+					"bootstrap": {
+						"value": "[parameters('bootstrap')]"
+					},
 					"sshKey": {
 						 "value": "[parameters('sshPublicKey')]"
 					}
